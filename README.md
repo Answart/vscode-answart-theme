@@ -1,2 +1,3 @@
-# vscode-answart-theme
-Visual Studio Code Answart theme
+# VS Code Answart Theme
+
+Theme extension for Visual Studio Code: "Answart Theme".
