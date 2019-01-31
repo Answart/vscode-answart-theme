@@ -48,22 +48,6 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Text &#x2f; variable parameter func</string>
-			<key>scope</key>
-			<string>
-				comment.unused.elixir,
-				variable.parameter.function
-			</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#D0C6B6</string>
-				<key>fontStyle</key>
-				<string>none</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>Comments</string>
 			<key>scope</key>
 			<string>
@@ -93,7 +77,6 @@
 			<string>Punctuation</string>
 			<key>scope</key>
 			<string>
-				punctuation.definition.variable,
 				punctuation.definition.parameters,
 				punctuation.definition.array,
 				punctuation.definition.function,
@@ -186,7 +169,9 @@
 			<string>Operators</string>
 			<key>scope</key>
 			<string>
-				keyword.operator
+				keyword.operator,
+				keyword.operator.new,
+				keyword.operator.delete
 			</string>
 			<key>settings</key>
 			<dict>
@@ -196,33 +181,24 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>New Operator</string>
+			<string>Selector</string>
 			<key>scope</key>
-			<string>keyword.operator.new</string>
+			<string>meta.selector</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#918A7B</string>
+				<string>#BCB4A5</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Units</string>
-			<key>scope</key>
-			<string>keyword.other.unit</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#D08770</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Integers</string>
+			<string>Integers&#x2f;Units</string>
 			<key>scope</key>
 			<string>
 				constant.numeric,
-				variable.other.anonymous.elixir
+				variable.other.anonymous.elixir,
+				keyword.other.unit,
+				keyword.unit
 			</string>
 			<key>settings</key>
 			<dict>
@@ -304,6 +280,14 @@
 				punctuation.definition.string,
 				string.quoted.double.shell,
 				support.function.variable.quoted.single.elixir,
+				meta.structure.dictionary.json,
+				string.quoted.double.json,
+				source.css string,
+				source.css punctuation.definition.string,
+				source.stylus string,
+				source.stylus punctuation.definition.string,
+				source.json string,
+				source.json punctuation.definition.string
 			</string>
 			<key>settings</key>
 			<dict>
@@ -315,10 +299,12 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Keywords</string>
+			<string>Storage Type&#x2f;Modifiers</string>
 			<key>scope</key>
 			<string>
-				keyword
+				storage.type,
+				meta.other.type.phpdoc,
+				storage.modifier,
 			</string>
 			<key>settings</key>
 			<dict>
@@ -328,14 +314,16 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Types</string>
+			<string>Keyword Control</string>
 			<key>scope</key>
 			<string>
-				storage.type,
-				storage.type,
-				meta.other.type.phpdoc,
+				keyword,
+				keyword.control,
+				keyword.control.js,
 				keyword.other.type,
-				keyword.other.array.phpdoc
+				keyword.other.array.phpdoc,
+				meta.function.js,
+				storage.type.function.js,
 			</string>
 			<key>settings</key>
 			<dict>
@@ -350,6 +338,19 @@
 			<string>
 				support.type.primitive,
 				support.type.builtin
+			</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FDC77E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Namespace</string>
+			<key>scope</key>
+			<string>
+				meta.namespace
 			</string>
 			<key>settings</key>
 			<dict>
@@ -432,64 +433,49 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Variables</string>
+			<string>Reserved Variables</string>
 			<key>scope</key>
 			<string>
 				variable,
-				variable.language,
-				meta.definition.variable.name
-			</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#FFF6E5</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>this.</string>
-			<key>scope</key>
-			<string>
+				meta.definition.variable.name,
 				var.this
+				variable.language,
 				variable.language.this.js
 				variable.language.this.ts
 				variable.language.this.jsx
-				variable.language.this
+				variable.language.this,
+				punctuation.definition.variable,
 			</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#FFF6E5</string>
-				<key>fontStyle</key>
-				<string>none</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Methods</string>
+			<string>Variable Generic</string>
+			<key>scope</key>
+			<string>
+				variable.other,
+				variable.other.readwrite,
+				variable.other.member
+			</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#EBE0CA</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Special Methods</string>
 			<key>scope</key>
 			<string>keyword.other.special-method</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#718EAB</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Function Cals</string>
-			<key>scope</key>
-			<string>
-				meta.function-call,
-				meta.require,
-				meta.function-call,
-				meta.function-call.object,
-				meta.function-call.static
-			</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#718EAB</string>
+				<string>#7993AD</string>
 			</dict>
 		</dict>
 		<dict>
@@ -501,18 +487,24 @@
 				support.function,
 				support.function.any-method,
 				meta.require,
+				support.module
 			</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#718EAB</string>
+				<string>#7993AD</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Function Args</string>
+			<string>Function Calls</string>
 			<key>scope</key>
-			<string>meta.function-call.arguments</string>
+			<string>
+				meta.function-call,
+				meta.function-call,
+				meta.function-call.object,
+				meta.function-call.static
+			</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -521,26 +513,33 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Puncuation Entity</string>
+			<string>Function Call Args</string>
 			<key>scope</key>
-			<string>
-				punctuation.definition.entity
-			</string>
+			<string>meta.function-call.arguments</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#BCB4A5</string>
+				<string>#8FA1B3</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Selector</string>
+			<string>Property Key</string>
 			<key>scope</key>
-			<string>meta.selector</string>
+			<string>
+				meta.object-literal.key,
+				meta.object.member,
+				entity.name.tag.yaml,
+				constant.other.key,
+				constant.other.object.key.js,
+				string.unquoted.label.js,
+				constant.other.symbol.elixir,
+				punctuation.definition.constant.elixir,
+			</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#BCB4A5</string>
+				<string>#918A7B</string>
 			</dict>
 		</dict>
 		<dict>
@@ -577,26 +576,6 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Property Key</string>
-			<key>scope</key>
-			<string>
-				meta.object-literal.key,
-				meta.object.member,
-				entity.name.tag.yaml,
-				constant.other.key,
-				constant.other.object.key.js,
-				string.unquoted.label.js,
-				constant.other.symbol.elixir,
-				punctuation.definition.constant.elixir,
-			</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#918A7B</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>Variable Property</string>
 			<key>scope</key>
 			<string>
@@ -608,7 +587,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#BCB4A5</string>
+				<string>#B8AB95</string>
 				<key>fontStyle</key>
 				<string>none</string>
 			</dict>
@@ -619,6 +598,9 @@
 			<key>scope</key>
 			<string>
 				variable.parameter,
+				variable.parameter.function,
+				variable.parameter.function.js,
+				comment.unused.elixir,
 				parameter.variable.function.elixir
 			</string>
 			<key>settings</key>
@@ -689,7 +671,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Attribute Pseudo-class&#x2f;ele</string>
+			<string>Attribute Pseudo</string>
 			<key>scope</key>
 			<string>
 				entity.other.attribute-name.pseudo-element,
@@ -772,20 +754,6 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>JSON String</string>
-			<key>scope</key>
-			<string>
-				meta.structure.dictionary.json,
-				string.quoted.double.json
-			</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#8DA87D</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>CSS @ rules</string>
 			<key>scope</key>
 			<string>
@@ -823,6 +791,21 @@
 			<dict>
 				<key>foreground</key>
 				<string>#7F8B98</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markdown Para</string>
+			<key>scope</key>
+			<string>
+				meta.paragraph.markdown,
+			</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#D0C6B6</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1061,22 +1044,6 @@
 			<dict>
 				<key>foreground</key>
 				<string>#918A7B</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Markdown Linebreak&#x2f;Para</string>
-			<key>scope</key>
-			<string>
-				meta.paragraph.markdown,
-				meta.dummy.line-break,
-			</string>
-			<key>settings</key>
-			<dict>
-				<key>background</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#D0C6B6</string>
 			</dict>
 		</dict>
 		<dict>
