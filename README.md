@@ -4,11 +4,13 @@
 
 # VS Code "Answart Theme"
 
-Theme extension for text editor [**Visual Studio Code**](https://code.visualstudio.com). The **.tmTheme** could also be used for [**Atom.io**](https://atom.io).
+A theme extension for text editor [**Visual Studio Code**](https://code.visualstudio.com).
 
 I created this because I wanted a theme that was colorful yet simple and soft on the eyes.
 
-Made using [tmtheme-editor.herokuapp.com](https://tmtheme-editor.herokuapp.com).
+Made using [tmtheme-editor.herokuapp.com](https://tmtheme-editor.herokuapp.com). The **.tmTheme** file could also be used for [**Atom.io**](https://atom.io).
+
+Here is a [sample theme repo](https://github.com/Microsoft/vscode-extension-samples/tree/master/theme-sample).
 
 App Map
 -------
